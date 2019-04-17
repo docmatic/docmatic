@@ -1,0 +1,39 @@
+{
+  "name": "docmatic",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Falk Hoppe <falkhoppe81@gmail.com>",
+  "license": "Apache-2.0",
+  "bin": {
+    "docmatic": "bin/docmatic.js"
+  },
+  "scripts": {
+    "start": "docmatic",
+    "test": "tape test/unit/*-test.js",
+    "watch:test": "chokidar 'index.js' 'lib/**/*.js' 'test/unit/*-test.js' -c 'npm test'",
+    "watch:start": "chokidar 'index.js' 'lib/**/*.js' 'bin/**/*.js' -c 'npm start'"
+  },
+  "description": "",
+  "dependencies": {
+    "args": "^5.0.1",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "helmet": "^3.16.0",
+    "docmatic-plugin": "0.0.2",
+    "morgan": "^1.9.1",
+    "pug": "^2.0.3",
+    "slug": "^1.1.0"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.2",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.18.11",
+    "sinon": "^7.3.1",
+    "tape": "^4.10.1"
+  }
+}
